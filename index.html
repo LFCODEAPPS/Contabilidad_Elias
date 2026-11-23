@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#0e2038">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Cristhian Bautista">
+  <meta name="apple-mobile-web-app-title" content="Elias Tirado">
   <link id="favicon-img" rel="icon" type="image/jpeg" href="money.jpg">
   <link id="apple-icon-img" rel="apple-touch-icon" href="money.jpg">
-  <title>Cristhian Bautista</title>
+  <title>Elias Tirado</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -93,7 +93,7 @@
       padding-bottom: 6px;
       transition: background .2s;
     }
-    .top { background: linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%); color: #fff; padding: 18px 18px 46px; border-radius: 0 0 24px 24px; transition: background .2s; }
+    .top { background: linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%); color: #fff; padding: 18px 18px 48px; border-radius: 0 0 24px 24px; }
     .header { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
     .header-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
     .header-actions { display: flex; align-items: center; gap: 8px; flex: none; }
@@ -118,44 +118,11 @@
     .btn-icon:active { transform: scale(.94); }
     .btn-gear:active { transform: scale(.94) rotate(25deg); }
 
-    /* Selector de Perfil: Empresa / Personal encima del Saldo */
-    .profile-switcher {
-      margin: -34px 14px 8px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 4px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4px;
-      box-shadow: 0 6px 18px rgba(0,0,0,.1);
-      position: relative;
-      z-index: 2;
-    }
-    .profile-btn {
-      padding: 9px 10px;
-      border: none;
-      border-radius: 9px;
-      background: transparent;
-      color: var(--muted);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.2px;
-      cursor: pointer;
-      transition: background .15s, color .15s, box-shadow .15s;
-    }
-    .profile-btn:hover { color: var(--text); }
-    .profile-btn.active {
-      background: var(--ink);
-      color: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,.18);
-    }
-
-    .summary { margin: 0 14px 8px; background: var(--card); border-radius: var(--radius); box-shadow: 0 10px 26px rgba(0,0,0,.14); overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); }
+    .summary { margin: -36px 14px 8px; background: var(--card); border-radius: var(--radius); box-shadow: 0 10px 26px rgba(0,0,0,.14); overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); }
     .box { padding: 12px 16px; text-align: left; min-width: 0; }
     .box small { color: var(--muted); font-size: 12px; display: block; font-weight: 500; }
     .box strong { font-size: 18px; margin-top: 3px; display: block; font-weight: 600; font-variant-numeric: tabular-nums; letter-spacing: -0.2px; }
-    .box.main { grid-column: 1 / -1; background: var(--accent-soft); border-bottom: 1px solid var(--line); padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; transition: background .2s; }
+    .box.main { grid-column: 1 / -1; background: var(--accent-soft); border-bottom: 1px solid var(--line); padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
     .box.main strong { font-size: 28px; font-weight: 700; color: var(--text); letter-spacing: -0.6px; }
     .box.in { border-right: 1px solid var(--line); }
     .green { color: var(--green); }
@@ -524,9 +491,9 @@
       <div class="top">
         <div class="header">
           <div class="header-left">
-            <div class="mark">CB</div>
+            <div class="mark">ET</div>
             <div>
-              <h1 id="app-title">Cristhian Bautista</h1>
+              <h1 id="app-title">Elias Tirado</h1>
               <p id="app-subtitle">Gestión y registro de ingresos y egresos</p>
             </div>
           </div>
@@ -547,19 +514,13 @@
         </div>
       </div>
 
-      <!-- SELECTOR DE PERFIL: EMPRESA / PERSONAL -->
-      <div class="profile-switcher" role="tablist" aria-label="Seleccionar perfil">
-        <button type="button" class="profile-btn active" id="btn-prof-empresa" data-profile="empresa" onclick="cambiarPerfil('empresa')">EMPRESA</button>
-        <button type="button" class="profile-btn" id="btn-prof-personal" data-profile="personal" onclick="cambiarPerfil('personal')">PERSONAL</button>
-      </div>
-
       <div class="summary">
         <div class="box main">
           <div>
             <small id="lbl-balance">Saldo</small>
             <strong id="balance">S/ 0.00</strong>
           </div>
-          <a class="btn-sheet-link" id="btn-full-data" href="https://docs.google.com/spreadsheets/d/1hNY2fsdnp4_NcrhboaKMkZdw9BDzxG4E4lkv6pp6dOE/edit?gid=1597396118#gid=1597396118" target="_blank" rel="noopener noreferrer">
+          <a class="btn-sheet-link" id="btn-full-data" href="https://docs.google.com/spreadsheets/d/1d-q04Txz4gMzPaAEUB1xCksOvZr2eb-ZpHDPmv4At74/edit?gid=1597396118#gid=1597396118" target="_blank" rel="noopener noreferrer">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="3" y="3" width="18" height="18" rx="2"></rect>
               <line x1="3" y1="9" x2="21" y2="9"></line>
@@ -732,52 +693,30 @@
       </div>
 
       <div class="setting-group">
-        <span class="setting-label" id="lbl-set-color-emp">Color de la app — Empresa</span>
+        <span class="setting-label" id="lbl-set-color">Color de la app</span>
         <div class="color-grid">
-          <button type="button" class="color-btn" data-color-target="empresa" data-color="navy" onclick="setColorPerfil('empresa', 'navy')">
+          <button type="button" class="color-btn" data-color="navy" onclick="setColorApp('navy')">
             <span class="swatch" style="background:#0e2038;"></span>
-            <span class="lbl-col-navy">Azul Marino</span>
+            <span id="col-navy">Azul Marino</span>
           </button>
-          <button type="button" class="color-btn" data-color-target="empresa" data-color="emerald" onclick="setColorPerfil('empresa', 'emerald')">
+          <button type="button" class="color-btn" data-color="emerald" onclick="setColorApp('emerald')">
             <span class="swatch" style="background:#093b2c;"></span>
-            <span class="lbl-col-emerald">Esmeralda</span>
+            <span id="col-emerald">Esmeralda</span>
           </button>
-          <button type="button" class="color-btn" data-color-target="empresa" data-color="burgundy" onclick="setColorPerfil('empresa', 'burgundy')">
+          <button type="button" class="color-btn" data-color="burgundy" onclick="setColorApp('burgundy')">
             <span class="swatch" style="background:#47121d;"></span>
-            <span class="lbl-col-burgundy">Borgoña</span>
+            <span id="col-burgundy">Borgoña</span>
           </button>
-          <button type="button" class="color-btn" data-color-target="empresa" data-color="slate" onclick="setColorPerfil('empresa', 'slate')">
+          <button type="button" class="color-btn" data-color="slate" onclick="setColorApp('slate')">
             <span class="swatch" style="background:#1e293b;"></span>
-            <span class="lbl-col-slate">Pizarra</span>
-          </button>
-        </div>
-      </div>
-
-      <div class="setting-group">
-        <span class="setting-label" id="lbl-set-color-pers">Color de la app — Personal</span>
-        <div class="color-grid">
-          <button type="button" class="color-btn" data-color-target="personal" data-color="navy" onclick="setColorPerfil('personal', 'navy')">
-            <span class="swatch" style="background:#0e2038;"></span>
-            <span class="lbl-col-navy">Azul Marino</span>
-          </button>
-          <button type="button" class="color-btn" data-color-target="personal" data-color="emerald" onclick="setColorPerfil('personal', 'emerald')">
-            <span class="swatch" style="background:#093b2c;"></span>
-            <span class="lbl-col-emerald">Esmeralda</span>
-          </button>
-          <button type="button" class="color-btn" data-color-target="personal" data-color="burgundy" onclick="setColorPerfil('personal', 'burgundy')">
-            <span class="swatch" style="background:#47121d;"></span>
-            <span class="lbl-col-burgundy">Borgoña</span>
-          </button>
-          <button type="button" class="color-btn" data-color-target="personal" data-color="slate" onclick="setColorPerfil('personal', 'slate')">
-            <span class="swatch" style="background:#1e293b;"></span>
-            <span class="lbl-col-slate">Pizarra</span>
+            <span id="col-slate">Pizarra</span>
           </button>
         </div>
       </div>
 
       <div class="setting-group" style="margin-bottom:0;">
         <span class="setting-label" id="lbl-set-support">Soporte</span>
-        <a class="support-link" href="mailto:Ferdoctus@iCloud.com?subject=Soporte%20-%20Cristhian%20Bautista&body=Hola%20Fernando%20Carranza%2C%20necesito%20ayuda%20con%20la%20aplicaci%C3%B3n.">
+        <a class="support-link" href="mailto:Ferdoctus@iCloud.com?subject=Soporte%20-%20Elias%20Tirado&body=Hola%20Fernando%20Carranza%2C%20necesito%20ayuda%20con%20la%20aplicaci%C3%B3n.">
           <div>
             <span id="lbl-contact-support">CONTACTAR A SOPORTE</span>
             <span class="support-name">Fernando Carranza</span>
@@ -806,21 +745,13 @@
 
     document.addEventListener('dblclick', (e) => e.preventDefault(), { passive: false });
 
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxahNRdcA7N3swHzduZO9NYUq4NxtGEfN87sEolkkDrUBM70pT-3trB10TaX30pIeM0/exec';
-    const CACHE_KEY = 'cb_cache_dual_v1';
-
-    const SHEET_URLS = {
-      empresa: 'https://docs.google.com/spreadsheets/d/1hNY2fsdnp4_NcrhboaKMkZdw9BDzxG4E4lkv6pp6dOE/edit?gid=1597396118#gid=1597396118',
-      personal: 'https://docs.google.com/spreadsheets/d/1hNY2fsdnp4_NcrhboaKMkZdw9BDzxG4E4lkv6pp6dOE/edit?gid=1419834849#gid=1419834849'
-    };
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxduxleauq4C-VomJquWmmhJnf2FmGLZlDUeHbVkVUzoYCb8Yq6_Bw0HtRom6VsaX-l/exec';
+    const CACHE_KEY = 'cb_cache_v2';
 
     const I18N = {
       es: {
-        title: 'Cristhian Bautista',
-        subtitleEmpresa: 'Gestión y registro de ingresos y egresos · Empresa',
-        subtitlePersonal: 'Gestión y registro de ingresos y egresos · Personal',
-        profEmpresa: 'EMPRESA',
-        profPersonal: 'PERSONAL',
+        title: 'Elias Tirado',
+        subtitle: 'Gestión y registro de ingresos y egresos',
         balance: 'Saldo',
         fullData: 'Data completa',
         incomes: 'Ingresos',
@@ -857,7 +788,6 @@
         confirmDesc: '¿Deseas guardar este movimiento en Google Sheets?',
         confirmDeleteTitle: 'Confirmar eliminación',
         confirmDeleteDesc: '¿Deseas eliminar este movimiento de Google Sheets?',
-        confirmProfile: 'Apartado',
         confirmType: 'Tipo',
         confirmCancel: 'Cancelar',
         confirmAccept: 'Confirmar',
@@ -880,8 +810,7 @@
         auto: 'Automático',
         setLang: 'Idioma',
         setCount: 'Cantidad de últimos movimientos',
-        setColorEmp: 'Color de la app — Empresa',
-        setColorPers: 'Color de la app — Personal',
+        setColor: 'Color de la app',
         navy: 'Azul Marino',
         emerald: 'Esmeralda',
         burgundy: 'Borgoña',
@@ -890,11 +819,8 @@
         contactSupport: 'CONTACTAR A SOPORTE'
       },
       en: {
-        title: 'Cristhian Bautista',
-        subtitleEmpresa: 'Income and expense tracking · Business',
-        subtitlePersonal: 'Income and expense tracking · Personal',
-        profEmpresa: 'BUSINESS',
-        profPersonal: 'PERSONAL',
+        title: 'Elias Tirado',
+        subtitle: 'Income and expense tracking & management',
         balance: 'Balance',
         fullData: 'Full data',
         incomes: 'Income',
@@ -931,7 +857,6 @@
         confirmDesc: 'Do you want to save this transaction to Google Sheets?',
         confirmDeleteTitle: 'Confirm deletion',
         confirmDeleteDesc: 'Do you want to delete this transaction from Google Sheets?',
-        confirmProfile: 'Section',
         confirmType: 'Type',
         confirmCancel: 'Cancel',
         confirmAccept: 'Confirm',
@@ -954,8 +879,7 @@
         auto: 'Auto',
         setLang: 'Language',
         setCount: 'Recent transactions count',
-        setColorEmp: 'App color — Business',
-        setColorPers: 'App color — Personal',
+        setColor: 'App color',
         navy: 'Navy Blue',
         emerald: 'Emerald',
         burgundy: 'Burgundy',
@@ -966,27 +890,18 @@
     };
 
     const prefs = {
-      profile: localStorage.getItem('cb_profile') || 'empresa',
       theme: localStorage.getItem('cb_theme') || 'auto',
       lang: localStorage.getItem('cb_lang') || 'es',
       count: Number(localStorage.getItem('cb_count')) || 5,
-      colorEmpresa: localStorage.getItem('cb_color_empresa') || localStorage.getItem('cb_color') || 'navy',
-      colorPersonal: localStorage.getItem('cb_color_personal') || 'emerald'
+      color: localStorage.getItem('cb_color') || 'navy'
     };
 
     let mostrarTodos = false;
-    let movimientosPorPerfil = {
-      empresa: [],
-      personal: []
-    };
+    let todosMovimientos = [];
     let catalogos = { metodosPago: [], catIngresos: [], catEgresos: [] };
     let accionPendiente = null;
 
     const darkMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-
-    function getMovimientosActivos() {
-      return movimientosPorPerfil[prefs.profile] || [];
-    }
 
     function recargarPaginaCompleta() {
       window.location.reload();
@@ -995,27 +910,17 @@
     function aplicarTema() {
       const esOscuro = prefs.theme === 'dark' || (prefs.theme === 'auto' && darkMediaQuery.matches);
       document.body.classList.toggle('dark', esOscuro);
-
-      const colorActivo = prefs.profile === 'personal' ? prefs.colorPersonal : prefs.colorEmpresa;
-      document.body.setAttribute('data-theme-color', colorActivo);
+      document.body.setAttribute('data-theme-color', prefs.color);
 
       const coloresMeta = { navy: '#0e2038', emerald: '#093b2c', burgundy: '#47121d', slate: '#1e293b' };
       const metaTheme = document.querySelector('meta[name="theme-color"]');
-      if (metaTheme) metaTheme.setAttribute('content', coloresMeta[colorActivo] || '#0e2038');
+      if (metaTheme) metaTheme.setAttribute('content', coloresMeta[prefs.color] || '#0e2038');
 
       document.querySelectorAll('[data-theme]').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-theme') === prefs.theme);
       });
-
-      document.querySelectorAll('[data-color-target="empresa"]').forEach(btn => {
-        btn.classList.toggle('active', btn.getAttribute('data-color') === prefs.colorEmpresa);
-      });
-      document.querySelectorAll('[data-color-target="personal"]').forEach(btn => {
-        btn.classList.toggle('active', btn.getAttribute('data-color') === prefs.colorPersonal);
-      });
-
-      document.querySelectorAll('[data-profile]').forEach(btn => {
-        btn.classList.toggle('active', btn.getAttribute('data-profile') === prefs.profile);
+      document.querySelectorAll('[data-color]').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-color') === prefs.color);
       });
     }
 
@@ -1029,28 +934,10 @@
       aplicarTema();
     }
 
-    function setColorPerfil(perfil, color) {
-      if (perfil === 'personal') {
-        prefs.colorPersonal = color;
-        localStorage.setItem('cb_color_personal', color);
-      } else {
-        prefs.colorEmpresa = color;
-        localStorage.setItem('cb_color_empresa', color);
-      }
+    function setColorApp(color) {
+      prefs.color = color;
+      localStorage.setItem('cb_color', color);
       aplicarTema();
-    }
-
-    function cambiarPerfil(perfil) {
-      if (prefs.profile === perfil) return;
-      prefs.profile = perfil;
-      localStorage.setItem('cb_profile', perfil);
-      mostrarTodos = false;
-
-      document.getElementById('btn-full-data').href = SHEET_URLS[perfil] || SHEET_URLS.empresa;
-
-      aplicarTema();
-      aplicarIdioma();
-      recalcularTotalesYRender();
     }
 
     function setCantidadMovimientos(cant) {
@@ -1069,9 +956,7 @@
       document.title = t.title;
 
       document.getElementById('app-title').textContent = t.title;
-      document.getElementById('app-subtitle').textContent = prefs.profile === 'personal' ? t.subtitlePersonal : t.subtitleEmpresa;
-      document.getElementById('btn-prof-empresa').textContent = t.profEmpresa;
-      document.getElementById('btn-prof-personal').textContent = t.profPersonal;
+      document.getElementById('app-subtitle').textContent = t.subtitle;
       document.getElementById('lbl-balance').textContent = t.balance;
       document.getElementById('lbl-full-data').textContent = t.fullData;
       document.getElementById('lbl-incomes').textContent = t.incomes;
@@ -1104,12 +989,11 @@
       document.getElementById('opt-auto').textContent = t.auto;
       document.getElementById('lbl-set-lang').textContent = t.setLang;
       document.getElementById('lbl-set-count').textContent = t.setCount;
-      document.getElementById('lbl-set-color-emp').textContent = t.setColorEmp;
-      document.getElementById('lbl-set-color-pers').textContent = t.setColorPers;
-      document.querySelectorAll('.lbl-col-navy').forEach(el => el.textContent = t.navy);
-      document.querySelectorAll('.lbl-col-emerald').forEach(el => el.textContent = t.emerald);
-      document.querySelectorAll('.lbl-col-burgundy').forEach(el => el.textContent = t.burgundy);
-      document.querySelectorAll('.lbl-col-slate').forEach(el => el.textContent = t.slate);
+      document.getElementById('lbl-set-color').textContent = t.setColor;
+      document.getElementById('col-navy').textContent = t.navy;
+      document.getElementById('col-emerald').textContent = t.emerald;
+      document.getElementById('col-burgundy').textContent = t.burgundy;
+      document.getElementById('col-slate').textContent = t.slate;
       document.getElementById('lbl-set-support').textContent = t.support;
       document.getElementById('lbl-contact-support').textContent = t.contactSupport;
 
@@ -1156,11 +1040,9 @@
     function construirResumenConfirmacion(payload) {
       const t = I18N[prefs.lang] || I18N.es;
       const entidadLabel = payload.tipo === 'Ingreso' ? t.origin : t.establishment;
-      const perfilLabel = (payload.perfil || prefs.profile) === 'personal' ? t.profPersonal : t.profEmpresa;
       const montoFmt = `S/ ${Number(payload.monto || 0).toFixed(2)}`;
 
       let html = `
-        <div class="confirm-line"><span>${t.confirmProfile}:</span><strong>${perfilLabel}</strong></div>
         <div class="confirm-line"><span>${t.confirmType}:</span><strong>${payload.tipo}</strong></div>
         <div class="confirm-line"><span>${t.amount}:</span><strong>${montoFmt}</strong></div>
       `;
@@ -1195,13 +1077,11 @@
     }
 
     function solicitarEliminacion(index) {
-      const lista = getMovimientosActivos();
-      const mov = lista[index];
+      const mov = todosMovimientos[index];
       if (!mov) return;
       const t = I18N[prefs.lang] || I18N.es;
       const payload = {
         action: 'delete',
-        perfil: prefs.profile,
         index,
         sheetRow: mov.sheetRow || mov.rowIndex || '',
         rowIndex: mov.rowIndex || mov.sheetRow || '',
@@ -1319,9 +1199,8 @@
     }
 
     function recalcularTotalesYRender() {
-      const lista = getMovimientosActivos();
       let ingresos = 0, egresos = 0;
-      lista.forEach(m => {
+      todosMovimientos.forEach(m => {
         const monto = Number(m.monto) || 0;
         if (m.tipo === 'Ingreso') ingresos += monto;
         else egresos += monto;
@@ -1337,29 +1216,28 @@
 
     function renderHistorial() {
       const t = I18N[prefs.lang] || I18N.es;
-      const lista = getMovimientosActivos();
       const list = document.getElementById('history');
       const topBtn = document.getElementById('btn-toggle-all');
       const footer = document.getElementById('history-footer');
 
       list.innerHTML = '';
 
-      if (lista.length === 0) {
+      if (todosMovimientos.length === 0) {
         topBtn.style.display = 'none';
         footer.style.display = 'none';
         list.innerHTML = `<li class="item"><span>${t.emptyHist}</span></li>`;
         return;
       }
 
-      const hayMas = lista.length > prefs.count;
+      const hayMas = todosMovimientos.length > prefs.count;
       topBtn.style.display = hayMas ? 'inline-block' : 'none';
       footer.style.display = hayMas ? 'flex' : 'none';
       actualizarBotonesToggle();
 
-      const visibles = mostrarTodos ? lista : lista.slice(0, prefs.count);
+      const visibles = mostrarTodos ? todosMovimientos : todosMovimientos.slice(0, prefs.count);
 
       visibles.forEach((m, idx) => {
-        const realIndex = mostrarTodos ? idx : lista.indexOf(m);
+        const realIndex = mostrarTodos ? idx : todosMovimientos.indexOf(m);
         const li = document.createElement('li');
         li.className = 'item';
         const isIncome = m.tipo === 'Ingreso';
@@ -1429,9 +1307,8 @@
     }
 
     function renderGraficos() {
-      const lista = getMovimientosActivos();
-      renderGrafico('chart-in', lista, 'Ingreso', 'in');
-      renderGrafico('chart-out', lista, 'Egreso', 'out');
+      renderGrafico('chart-in', todosMovimientos, 'Ingreso', 'in');
+      renderGrafico('chart-out', todosMovimientos, 'Egreso', 'out');
     }
 
     function aplicarDatosEnPantalla(data) {
@@ -1442,9 +1319,7 @@
       const tipoActual = document.getElementById('tipo').value;
       llenarSelect('categoria', tipoActual === 'Ingreso' ? catalogos.catIngresos : catalogos.catEgresos);
 
-      movimientosPorPerfil.empresa = data.movimientosEmpresa || data.movimientos || [];
-      movimientosPorPerfil.personal = data.movimientosPersonal || [];
-
+      todosMovimientos = data.movimientos || [];
       recalcularTotalesYRender();
     }
 
@@ -1480,7 +1355,6 @@
       e.preventDefault();
       const payload = {
         action: 'create',
-        perfil: prefs.profile,
         tipo: document.getElementById('tipo').value,
         fecha: document.getElementById('fecha').value,
         entidad: document.getElementById('entidad').value.trim(),
@@ -1538,12 +1412,11 @@
 
     async function ejecutarEliminacionConfirmada(payload) {
       const t = I18N[prefs.lang] || I18N.es;
-      const perfil = payload.perfil || prefs.profile;
       mostrarBloqueoProceso(true, t.deletingMsg);
 
-      const respaldo = [...(movimientosPorPerfil[perfil] || [])];
+      const respaldo = [...todosMovimientos];
       if (typeof payload.index === 'number' && payload.index >= 0) {
-        movimientosPorPerfil[perfil].splice(payload.index, 1);
+        todosMovimientos.splice(payload.index, 1);
       }
       recalcularTotalesYRender();
 
@@ -1565,18 +1438,13 @@
 
         const cached = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
         if (cached && cached.status === 'ok') {
-          if (perfil === 'personal') {
-            cached.movimientosPersonal = [...movimientosPorPerfil.personal];
-          } else {
-            cached.movimientosEmpresa = [...movimientosPorPerfil.empresa];
-            cached.movimientos = [...movimientosPorPerfil.empresa];
-          }
+          cached.movimientos = [...todosMovimientos];
           localStorage.setItem(CACHE_KEY, JSON.stringify(cached));
         }
 
         await cargarDatos();
       } catch (err) {
-        movimientosPorPerfil[perfil] = respaldo;
+        todosMovimientos = respaldo;
         recalcularTotalesYRender();
         alert(t.deleteErr);
       } finally {
@@ -1587,7 +1455,6 @@
     document.querySelectorAll('[data-count]').forEach(b => {
       b.classList.toggle('active', Number(b.getAttribute('data-count')) === prefs.count);
     });
-    document.getElementById('btn-full-data').href = SHEET_URLS[prefs.profile] || SHEET_URLS.empresa;
     aplicarTema();
     aplicarIdioma();
     cargarDatos();
